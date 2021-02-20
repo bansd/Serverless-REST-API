@@ -1,0 +1,28 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DynamodbPermission",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:DeleteTable",
+                "dynamodb:DescribeTable",
+                "dynamodb:GetItem",
+                "dynamodb:BatchGetItem",
+                "dynamodb:BatchWriteItem",
+                "dynamodb:PutItem",
+                "dynamodb:Scan",
+                "dynamodb:UpdateItem",
+                "dynamodb:CreateTable",
+                "dynamodb:GetShardIterator",
+                "dynamodb:DescribeBackup",
+                "dynamodb:UpdateTable",
+                "dynamodb:GetRecords",
+                "dynamodb:ListTables",
+                "dynamodb:DeleteItem",
+                "dynamodb:Query"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
