@@ -4,7 +4,7 @@ In this tutorial, we will build Serverless REST API using many AWS managed servi
 
 ### Step 1 : Create the dynamodb table
 Here I have created a table employee with partition key as book's isbn. Make sure partition key is always unique. DynamoDB uses the partition key value as input to an internal hash function. The output from the hash function determines the partition (physical storage internal to DynamoDB) in which the item will be stored.
-![IMAGE](resources/DF9002CE1ADF1EC8B5DDB55BF0FF070B.jpg =1013x469)
+![IMAGE](resources/DF9002CE1ADF1EC8B5DDB55BF0FF070B.jpg)
 
 ### Step 2: Create Lambda Function
 Here, I have create booksService lambda function
@@ -12,7 +12,7 @@ Here, I have create booksService lambda function
 
 Edit Basic Settings and set desired Memory and Timeout.
 
-![IMAGE](resources/EC7BFF2A3BA43DB54431D8BB93AE2AFA.jpg =647x424)
+![IMAGE](resources/EC7BFF2A3BA43DB54431D8BB93AE2AFA.jpg)
 
 ### Step 3: Create AWS Lambda Layer
 
