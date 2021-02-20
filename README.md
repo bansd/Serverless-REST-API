@@ -14,6 +14,15 @@ Edit Basic Settings and set desired Memory and Timeout.
 
 ![IMAGE](resources/EC7BFF2A3BA43DB54431D8BB93AE2AFA.jpg)
 
+You can create a sample Test Event and add this json to invoke the lambda function
+```
+{
+  "isbn": "9780525434290",
+  "author": "Dan Brown",
+  "book": "The Origin"
+}
+```
+
 ### Step 3: Create AWS Lambda Layer
 
 You'll need boto3 library to make all the necessary calls to dynamodb, you can choose to use your bundle your package with boto3 library every time you deploy your code, or, you can use AWS Lambda Layers.
