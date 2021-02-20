@@ -8,7 +8,7 @@ Here I have created a table employee with partition key as book's isbn. Make sur
 
 ### Step 2: Create Lambda Function
 Here, I have create booksService lambda function
-![IMAGE](resources/9B3B229774A24137785C3B0704CFB3A2.jpg =1302x622)
+![IMAGE](resources/9B3B229774A24137785C3B0704CFB3A2.jpg)
 
 Edit Basic Settings and set desired Memory and Timeout.
 
@@ -19,14 +19,14 @@ Edit Basic Settings and set desired Memory and Timeout.
 You'll need boto3 library to make all the necessary calls to dynamodb, you can choose to use your bundle your package with boto3 library every time you deploy your code, or, you can use AWS Lambda Layers.
 
 Go to AWS Lambda and click on create layer. Upload boto3-layer.zip(in this git repo)
-![IMAGE](resources/122699B4CFBB3B2BD220B163A4B9458F.jpg =810x661)
+![IMAGE](resources/122699B4CFBB3B2BD220B163A4B9458F.jpg)
 
 Go back to your lambda function, and select layer, then click on "Add a Layer"
-![IMAGE](resources/943C0E579948631556E17F8EECC098CC.jpg =1304x682)
+![IMAGE](resources/943C0E579948631556E17F8EECC098CC.jpg)
 
 Select Custom Layer, and from the dropdown select boto3 layer that you had just created
 
-![IMAGE](resources/69441EBD9CF4F1F0BC8088B877EC9DDD.jpg =835x567)
+![IMAGE](resources/69441EBD9CF4F1F0BC8088B877EC9DDD.jpg)
 
 ### Step 4: Update IAM role to add Dynamodb permissions
 Now copy the code in lambda_function.py(in this repo) and paste it in lambda_function.py in lambda function. Let’s discuss about the lambda function example in detail.
@@ -49,11 +49,11 @@ Paste the policy from `iam-policy.json`
 
 So now, let’s go to API Gateway on aws console, and hit the button to create API. You will reach a page, and you will need to select the REST(HTTP) protocol, and give a name to the API(bookServiceAPI), like the example below:
 
-![IMAGE](resources/5766DCB72B8FD585E836F51A3FEEAC43.jpg =1431x515)
+![IMAGE](resources/5766DCB72B8FD585E836F51A3FEEAC43.jpg)
 
 After that, you will be directed to the API you have created, and now you can create a POST endpoint for this API on the button Actions-> Create Method. Add your lambda function.
 
-![IMAGE](resources/403CF3C8E671A9B3AA131CC6FC472A2F.jpg =1431x515)
+![IMAGE](resources/403CF3C8E671A9B3AA131CC6FC472A2F.jpg)
 
 You can test the API you have created in the console, but now we will test it after it’s deployed. So go to Actions -> Deploy API, you can put any deployment stage you want, and you will receive an url. Pick that one and let’s test it in a real HTTP request!
 
