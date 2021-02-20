@@ -11,11 +11,11 @@ def addBook(book):
     table.put_item(Item=book)
 
 def lambda_handler(event, context):
-    print(event['body'])
+    print(event)
     
-    addBook(event['body'])
+    addBook(event)
     
     return {
         'statusCode': 200,
-        'body': json.dumps('Hello from Lambda!')
+        'body': json.dumps('Success!')
     }
